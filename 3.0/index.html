@@ -57,8 +57,8 @@
   
 
 
-  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-85730257-4","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-64FEEXPSDN"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&gtag("event","search",{search_term:this.value})}),"undefined"!=typeof location$&&location$.subscribe(function(e){gtag("config","G-64FEEXPSDN",{page_path:e.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FEEXPSDN"></script>
 
 
     
@@ -204,8 +204,8 @@
 
 
   <li class="md-tabs__item">
-    <a href="getting_started/quickstart/" class="md-tabs__link">
-      Getting Started
+    <a href="https://colab.research.google.com/github/logicalclocks/hopsworks-tutorials/blob/master/quickstart.ipynb" class="md-tabs__link">
+      Getting Started ↗
     </a>
   </li>
 
@@ -218,18 +218,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
-      <a href="tutorials/fraud_batch/1_feature_groups/" class="md-tabs__link">
+      <a href="tutorials/" class="md-tabs__link">
         Tutorials
       </a>
     </li>
-  
-
   
 
       
@@ -310,7 +303,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="https://docs.hopsworks.ai/hopsworks-api/dev" class="md-tabs__link">
+    <a href="https://docs.hopsworks.ai" class="md-tabs__link">
       <div class="dropdown"><button class="dropbtn"> API </button> <div id="myDropdown" class="dropdown-content"> <a id="hopsworks_api_link" href="https://docs.hopsworks.ai/hopsworks-api/dev">Hopsworks API</a> <a id="hsfs_api_link" href="https://docs.hopsworks.ai/feature-store-api/dev">Feature Store API</a> <a id="hsml_api_link" href="https://docs.hopsworks.ai/machine-learning-api/dev">MLOps API</a> </div></div>
     </a>
   </li>
@@ -323,7 +316,7 @@
 
   <li class="md-tabs__item">
     <a href="https://community.hopsworks.ai/" class="md-tabs__link">
-      Community
+      Community ↗
     </a>
   </li>
 
@@ -431,8 +424,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mlops-on-hops" class="md-nav__link">
-    MLOps on Hops
+  <a href="#mlops-on-hopsworks" class="md-nav__link">
+    MLOps on Hopsworks
   </a>
   
 </li>
@@ -495,8 +488,8 @@
   
   
     <li class="md-nav__item">
-      <a href="getting_started/quickstart/" class="md-nav__link">
-        Getting Started
+      <a href="https://colab.research.google.com/github/logicalclocks/hopsworks-tutorials/blob/master/quickstart.ipynb" class="md-nav__link">
+        Getting Started ↗
       </a>
     </li>
   
@@ -519,15 +512,17 @@
       
         
           
-        
+            
           
         
       
       
-        <label class="md-nav__link" for="__nav_3">
-          Tutorials
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="tutorials/">Tutorials</a>
+          
+        </div>
       
       <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
@@ -536,174 +531,6 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_1">
-          Fraud Batch
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Fraud Batch" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Fraud Batch
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutorials/fraud_batch/1_feature_groups/" class="md-nav__link">
-        Part 01: Load, Engineer &amp; Connect
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutorials/fraud_batch/2_feature_view_creation/" class="md-nav__link">
-        Part 02: Training Data &amp; Feature views
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutorials/fraud_batch/3_model_training/" class="md-nav__link">
-        Part 03: Model training &amp; UI Exploration
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Fraud Online
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Fraud Online" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Fraud Online
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutorials/fraud_online/1_feature_groups/" class="md-nav__link">
-        Part 01: Load, Engineer &amp; Connect
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutorials/fraud_online/2_feature_view_creation/" class="md-nav__link">
-        Part 02: Training Data &amp; Feature views
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="tutorials/fraud_online/3_model_training/" class="md-nav__link">
-        Part 03: Model training &amp; UI Exploration
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
             
           
         </ul>
@@ -1408,6 +1235,8 @@
         
           
             
+          
+        
           
         
           
@@ -3255,6 +3084,8 @@
       
         
           
+            
+          
         
           
         
@@ -3272,30 +3103,24 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
-          Integrations
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="user_guides/integrations/">Compute Engine</a>
+          
+            <label for="__nav_5_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
       
-      <nav class="md-nav" aria-label="Integrations" data-md-level="2">
+      <nav class="md-nav" aria-label="Compute Engine" data-md-level="2">
         <label class="md-nav__title" for="__nav_5_5">
           <span class="md-nav__icon md-icon"></span>
-          Integrations
+          Compute Engine
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="user_guides/integrations/setup/" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
             
           
             
@@ -3578,6 +3403,59 @@
 
             
           
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
+          Migration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Migration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Migration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user_guides/migration/30_migration/" class="md-nav__link">
+        3.0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3639,6 +3517,8 @@
       
       
       
+        
+          
         
           
         
@@ -3782,6 +3662,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="setup_installation/aws/troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
     </li>
   
 
@@ -4475,6 +4369,10 @@
         
           
         
+          
+        
+          
+        
       
       
         
@@ -4495,6 +4393,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="admin/variables/" class="md-nav__link">
+        Cluster Configuration
+      </a>
+    </li>
+  
+
             
           
             
@@ -4564,7 +4476,76 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6" type="checkbox" id="__nav_7_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_7" type="checkbox" id="__nav_7_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_7">
+          Monitoring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Monitoring" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_7">
+          <span class="md-nav__icon md-icon"></span>
+          Monitoring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="admin/monitoring/grafana/" class="md-nav__link">
+        Services Dashboards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="admin/monitoring/services-logs/" class="md-nav__link">
+        Services Logs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8" type="checkbox" id="__nav_7_8" >
       
       
       
@@ -4577,13 +4558,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_7_6">
+        <label class="md-nav__link" for="__nav_7_8">
           Authentication
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Authentication" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_6">
+        <label class="md-nav__title" for="__nav_7_8">
           <span class="md-nav__icon md-icon"></span>
           Authentication
         </label>
@@ -4612,7 +4593,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6_2" type="checkbox" id="__nav_7_6_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8_2" type="checkbox" id="__nav_7_8_2" >
       
       
       
@@ -4625,13 +4606,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_7_6_2">
+        <label class="md-nav__link" for="__nav_7_8_2">
           Configure OAuth2
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Configure OAuth2" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_6_2">
+        <label class="md-nav__title" for="__nav_7_8_2">
           <span class="md-nav__icon md-icon"></span>
           Configure OAuth2
         </label>
@@ -4695,7 +4676,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6_3" type="checkbox" id="__nav_7_6_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_8_3" type="checkbox" id="__nav_7_8_3" >
       
       
       
@@ -4708,13 +4689,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_7_6_3">
+        <label class="md-nav__link" for="__nav_7_8_3">
           Configure LDAP/Kerberos
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Configure LDAP/Kerberos" data-md-level="3">
-        <label class="md-nav__title" for="__nav_7_6_3">
+        <label class="md-nav__title" for="__nav_7_8_3">
           <span class="md-nav__icon md-icon"></span>
           Configure LDAP/Kerberos
         </label>
@@ -4787,7 +4768,7 @@
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_7" type="checkbox" id="__nav_7_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_9" type="checkbox" id="__nav_7_9" >
       
       
       
@@ -4800,13 +4781,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_7_7">
+        <label class="md-nav__link" for="__nav_7_9">
           High availability / Disaster Recovery
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="High availability / Disaster Recovery" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_7">
+        <label class="md-nav__title" for="__nav_7_9">
           <span class="md-nav__icon md-icon"></span>
           High availability / Disaster Recovery
         </label>
@@ -4875,7 +4856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://docs.hopsworks.ai/hopsworks-api/dev" class="md-nav__link">
+      <a href="https://docs.hopsworks.ai" class="md-nav__link">
         <div class="dropdown"><button class="dropbtn"> API </button> <div id="myDropdown" class="dropdown-content"> <a id="hopsworks_api_link" href="https://docs.hopsworks.ai/hopsworks-api/dev">Hopsworks API</a> <a id="hsfs_api_link" href="https://docs.hopsworks.ai/feature-store-api/dev">Feature Store API</a> <a id="hsml_api_link" href="https://docs.hopsworks.ai/machine-learning-api/dev">MLOps API</a> </div></div>
       </a>
     </li>
@@ -4891,7 +4872,7 @@
   
     <li class="md-nav__item">
       <a href="https://community.hopsworks.ai/" class="md-nav__link">
-        Community
+        Community ↗
       </a>
     </li>
   
@@ -4938,8 +4919,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mlops-on-hops" class="md-nav__link">
-    MLOps on Hops
+  <a href="#mlops-on-hopsworks" class="md-nav__link">
+    MLOps on Hopsworks
   </a>
   
 </li>
@@ -5243,15 +5224,15 @@ pointer-events: initial;
   </div>
 
 <p><img src="images/hopsworks-logo-2022.svg" loading="lazy" alt="" class="image_logo_02"></p>
-<p>Hopsworks is a data platform for ML with a Python-centric Feature Store and MLOps capabilities. Hopsworks is a modular platform. You can use it as a standalone Feature Store, you can use it manage, govern, and serve your models, and you can even use it to develop and operate feature pipelines and training pipelines. Hopsworks brings collaboration for ML teams, providing a secure, governed platform for developing, managing, and sharing ML assets - features, models, training data, batch scoring data, logs, and more. </p>
+<p>Hopsworks is a data platform for ML with a Python-centric Feature Store and MLOps capabilities. Hopsworks is a modular platform. You can use it as a standalone Feature Store, you can use it to manage, govern, and serve your models, and you can even use it to develop and operate feature pipelines and training pipelines. Hopsworks brings collaboration for ML teams, providing a secure, governed platform for developing, managing, and sharing ML assets - features, models, training data, batch scoring data, logs, and more. </p>
 <h2 id="python-centric-feature-store">Python-Centric Feature Store<a class="headerlink" href="#python-centric-feature-store" title="Permanent link">#</a></h2>
 <p>Hopsworks is widely used as a standalone Feature Store. Hopsworks breaks the monolithic model development pipeline into separate feature and training pipelines, enabling both feature reuse and better tested ML assets. You can develop features by building feature pipelines in any Python (or Spark or Flink) environment, either inside or outside Hopsworks. You can use the Python frameworks you are familiar with to build production feature pipelines. You can compute aggregations in Pandas, validate feature data with Great Expectations, reduce your data dimensionality with embeddings and PCA, test your feature logic and features end-to-end with PyTest, and transform your categorical and numerical features with Scikit-Learn, TensorFlow, and PyTorch. You can orchestrate your feature pipelines with your Python framework of choice, including Hopsworks' own Airflow support.</p>
 <h2 id="the-widest-feature-store-capabilities">The Widest Feature Store Capabilities<a class="headerlink" href="#the-widest-feature-store-capabilities" title="Permanent link">#</a></h2>
 <p>Hopsworks Feature Store also supports feature pipelines in PySpark, Spark, Flink, and SQL. Offline features can either be stored in Hopsworks, as Hudi tables on object storage, or in external data lakehouses (Snowflake, Databricks, Redshift, BigQuery, any JDBC-enabled platform) via External Feature Groups. Online features are served by <a href="https://www.rondbai.com">RonDB</a>, developed by Hopsworks as the lowest latency, highest throughput, highest availability data store for your features.</p>
-<h2 id="mlops-on-hops">MLOps on Hops<a class="headerlink" href="#mlops-on-hops" title="Permanent link">#</a></h2>
+<h2 id="mlops-on-hopsworks">MLOps on Hopsworks<a class="headerlink" href="#mlops-on-hopsworks" title="Permanent link">#</a></h2>
 <p>Hopsworks provides model serving capabilities through KServe, with additional support for feature/prediction logging to Kafka (also part of Hopsworks), and secure, low-latency model deployments via Istio. Hopsworks also has a Model Registry for KServe, with support for versioning both models and model assets (such as KServe transformers). Hopsworks also includes a vector database to provide similarity search capabilities for embeddings, based on <a href="concepts/mlops/opensearch/">OpenSearch</a>.</p>
 <h2 id="project-based-multi-tenancy-and-team-collaboration">Project-based Multi-Tenancy and Team Collaboration<a class="headerlink" href="#project-based-multi-tenancy-and-team-collaboration" title="Permanent link">#</a></h2>
-<p>Hopsworks provides projects as a secure sandbox in which teams can collaborate and share ML assets. Hopsworks' unique multi-tenant project model even enables sensitive data to be stored in a shared cluster, while still providing fine-grained sharing capabilities for ML assets across project boundaries.  Projects can be used to structure teams so that they have end-to-end responsibilty from raw data to managed features and models. Projects can also be used to create development, staging, and production environments for data teamss. All ML assets support versioning, lineage, and provenance provide all hopsworks users with a complete view of the MLOps life cycle, from feature engineering through model serving. </p>
+<p>Hopsworks provides projects as a secure sandbox in which teams can collaborate and share ML assets. Hopsworks' unique multi-tenant project model even enables sensitive data to be stored in a shared cluster, while still providing fine-grained sharing capabilities for ML assets across project boundaries.  Projects can be used to structure teams so that they have end-to-end responsibility from raw data to managed features and models. Projects can also be used to create development, staging, and production environments for data teams. All ML assets support versioning, lineage, and provenance provide all Hopsworks users with a complete view of the MLOps life cycle, from feature engineering through model serving. </p>
 <h2 id="development-and-operations">Development and Operations<a class="headerlink" href="#development-and-operations" title="Permanent link">#</a></h2>
 <p>Hopsworks provides development tools for Data Science, including conda environments for Python, Jupyter notebooks, jobs, or even notebooks as jobs. You can build production pipelines with the bundled Airflow, and even run ML training pipelines with GPUs in notebooks on Airflow. You can train models on as many GPUs as are installed in a Hopsworks cluster and easily share them among users. You can also run Spark, Spark Streaming, or Flink programs on Hopsworks, with support for elastic workers in the cloud (add/remove workers dynamically).</p>
 <h2 id="available-on-any-platform">Available on any Platform<a class="headerlink" href="#available-on-any-platform" title="Permanent link">#</a></h2>
@@ -5263,7 +5244,7 @@ pointer-events: initial;
 <li>Check out all our latest <a href="https://github.com/logicalclocks/hopsworks/releases">product releases</a></li>
 </ul>
 <h2 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">#</a></h2>
-<p>We are building the most complete and modular ML platform available in the market and we count on your support to continuously improve Hopsworks. Feel free to <a href="https://github.com/logicalclocks/hopsworks">give us suggestions</a>, <a href="https://github.com/logicalclocks/hopsworks/issues">report bugs</a> and <a href="https://github.com/logicalclocks/feature-store-api">add features to our library</a> anytime.</p>
+<p>We are building the most complete and modular ML platform available in the market, and we count on your support to continuously improve Hopsworks. Feel free to <a href="https://github.com/logicalclocks/hopsworks">give us suggestions</a>, <a href="https://github.com/logicalclocks/hopsworks/issues">report bugs</a> and <a href="https://github.com/logicalclocks/feature-store-api">add features to our library</a> anytime.</p>
 <h2 id="open-source">Open-Source<a class="headerlink" href="#open-source" title="Permanent link">#</a></h2>
 <p>Hopsworks is available under the AGPL-V3 license. In plain English this means that you are free to use Hopsworks and even build paid services on it, but if you modify the source code, you should also release back your changes and any systems built around it as AGPL-V3.</p>
 <p>We're the best at what we do, and we strive to keep the same standard for our community!
@@ -5282,13 +5263,13 @@ Our many thanks to the contributors of Hopsworks.</p>
       
       
         
-        <a href="getting_started/quickstart/" class="md-footer__link md-footer__link--next" aria-label="Next: Getting Started" rel="next">
+        <a href="tutorials/" class="md-footer__link md-footer__link--next" aria-label="Next: Tutorials" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Getting Started
+              Tutorials
             </div>
           </div>
           <div class="md-footer__button md-icon">
