@@ -3876,6 +3876,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6_3_5">
@@ -3889,6 +3891,20 @@
           Cluster upgrade
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade_3.0/" class="md-nav__link">
+        Version 3.0 or newer
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -4060,6 +4076,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6_4_5">
@@ -4073,6 +4091,20 @@
           Cluster upgrade
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure/upgrade_3.0/" class="md-nav__link">
+        Version 3.0 or newer
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -5389,76 +5421,116 @@ This guide explains how to lock down AWS permissions following the IT security p
 <h2 id="default-permissions">Default permissions<a class="headerlink" href="#default-permissions" title="Permanent link">#</a></h2>
 <p>This is the list of default permissions that are required by <a href="https://managed.hopsworks.ai">managed.hopsworks.ai</a>. If you prefer to limit these permissions, then proceed to the <a href="#limiting-the-cross-account-role-permissions">next section</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2012-10-17&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Statement&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HopsworksAI&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">          </span><span class="s2">&quot;ec2:AuthorizeSecurityGroupIngress&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DeleteSubnet&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeInstances&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:CreateVpc&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:AttachInternetGateway&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DeleteRouteTable&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:AssociateRouteTable&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;iam:PassRole&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:StartInstances&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:CreateInternetGateway&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:CreateSecurityGroup&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:CreateRoute&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeVolumes&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:ModifyVpcAttribute&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeVpcAttribute&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DeleteInternetGateway&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeKeyPairs&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeInstanceStatus&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:TerminateInstances&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:CreateTags&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DeleteRoute&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:CreateRouteTable&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:RunInstances&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DetachInternetGateway&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;iam:ListInstanceProfiles&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:StopInstances&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DisassociateRouteTable&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:RevokeSecurityGroupIngress&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeVpcs&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DeleteSecurityGroup&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DeleteVpc&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:CreateSubnet&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeSubnets&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:AssociateIamInstanceProfile&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeSecurityGroups&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeRouteTables&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;iam:GetInstanceProfile&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;iam:SimulatePrincipalPolicy&quot;</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ListResources&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeInstances&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeVpcs&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeVolumes&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeSubnets&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeKeyPairs&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeInstanceStatus&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;iam:ListInstanceProfiles&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeSecurityGroups&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeVpcAttribute&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeRouteTables&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;iam:GetInstanceProfile&quot;</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HopsworksAIBackup&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">          </span><span class="s2">&quot;ec2:RegisterImage&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DeregisterImage&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeImages&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:CreateSnapshot&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DeleteSnapshot&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="s2">&quot;ec2:DescribeSnapshots&quot;</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IAMPassRoleToInstance&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;iam:PassRole&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
 <span class="w">      </span><span class="p">},</span>
 <span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HopsworksAIModifyInstanceType&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">          </span><span class="s2">&quot;ec2:ModifyInstanceAttribute&quot;</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AllowInstanceActions&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="s2">&quot;ec2:RunInstances&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:StopInstances&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:TerminateInstances&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:StartInstances&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:CreateTags&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:AssociateIamInstanceProfile&quot;</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AllowNetworkRessourcesCreation&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="s2">&quot;ec2:CreateVpc&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:ModifyVpcAttribute&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:CreateInternetGateway&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:AttachInternetGateway&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:CreateSubnet&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:CreateSecurityGroup&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:CreateRouteTable&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:CreateRoute&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:AssociateRouteTable&quot;</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AllowNetworkRessourcesDeletion&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DeleteSubnet&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DeleteRouteTable&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DeleteInternetGateway&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DeleteRoute&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DetachInternetGateway&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DisassociateRouteTable&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DeleteSecurityGroup&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DeleteVpc&quot;</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AllowOpeningPorts&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="s2">&quot;ec2:AuthorizeSecurityGroupIngress&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:RevokeSecurityGroupIngress&quot;</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AllowTestingOfInstanceRole&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="s2">&quot;iam:SimulatePrincipalPolicy&quot;</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HopsworksAIBackup&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="s2">&quot;ec2:RegisterImage&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DeregisterImage&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeImages&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:CreateSnapshot&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DeleteSnapshot&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="s2">&quot;ec2:DescribeSnapshots&quot;</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;Sid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HopsworksAIModifyInstanceType&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Effect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Allow&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;Action&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">              </span><span class="s2">&quot;ec2:ModifyInstanceAttribute&quot;</span>
+<span class="w">          </span><span class="p">],</span>
+<span class="w">          </span><span class="nt">&quot;Resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span>
 <span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="limiting-the-cross-account-role-permissions">Limiting the cross-account role permissions<a class="headerlink" href="#limiting-the-cross-account-role-permissions" title="Permanent link">#</a></h2>
 <h3 id="step-1-create-a-vpc">Step 1: Create a VPC<a class="headerlink" href="#step-1-create-a-vpc" title="Permanent link">#</a></h3>
@@ -5727,13 +5799,13 @@ For this remove the following permissions from the instance profile:</p>
       
       
         
-        <a href="../upgrade_2.4/" class="md-footer__link md-footer__link--next" aria-label="Next: Version 2.4 or newer" rel="next">
+        <a href="../upgrade_3.0/" class="md-footer__link md-footer__link--next" aria-label="Next: Version 3.0 or newer" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Version 2.4 or newer
+              Version 3.0 or newer
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -5786,6 +5858,15 @@ For this remove the following permissions from the instance profile:</p>
     
     <a href="https://www.linkedin.com/company/hopsworks/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://bit.ly/publichopsworks" target="_blank" rel="noopener" title="bit.ly" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
     </a>
   
 </div>

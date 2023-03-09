@@ -3726,6 +3726,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6_3_5">
@@ -3739,6 +3741,20 @@
           Cluster upgrade
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrade_3.0/" class="md-nav__link">
+        Version 3.0 or newer
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -3958,6 +3974,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_6_4_5">
@@ -3971,6 +3989,20 @@
           Cluster upgrade
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure/upgrade_3.0/" class="md-nav__link">
+        Version 3.0 or newer
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -5178,12 +5210,10 @@
 <h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">#</a></h1>
 <p>A list of common problems that you might encounter during cluster creation and how to solve them. </p>
 <h2 id="unauthorized-error-during-cluster-creation">Unauthorized error during cluster creation<a class="headerlink" href="#unauthorized-error-during-cluster-creation" title="Permanent link">#</a></h2>
-<p>If you encounter the following error right after creating your cluster, then it is likely that you have either missed or misconfigured one of the permissions in the <a href="getting_started/#step-1-connecting-your-aws-account">cross account role setup</a>. </p>
+<p>If you encounter the following error right after creating your cluster, then it is likely that you have either missed or misconfigured one of the permissions in the <a href="../getting_started/#step-1-connecting-your-aws-account">cross account role setup</a>. </p>
 <p align="center">
   <figure>
-    <a  href="../../../assets/images/setup_installation/managed/aws/troubleshooting-unauthorized-error.png">
-      <img style="border: 1px solid #000;width:700px" src="../../../assets/images/setup_installation/managed/aws/troubleshooting-unauthorized-error.png" alt="Unauthorized error during cluster creation">
-    </a>
+    <img style="border: 1px solid #000;width:700px" src="../../../assets/images/setup_installation/managed/aws/troubleshooting-unauthorized-error.png" alt="Unauthorized error during cluster creation">
     <figcaption>Unauthorized error during cluster creation</figcaption>
   </figure>
 </p>
@@ -5196,14 +5226,12 @@
 <span class="w">    </span><span class="nt">&quot;DecodedMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{\&quot;allowed\&quot;:false,\&quot;explicitDeny\&quot;:false,\&quot;matchedStatements\&quot;:{\&quot;items\&quot;:[]},\&quot;failures\&quot;:{\&quot;items\&quot;:[]},\&quot;context\&quot;:{\&quot;principal\&quot;:{\&quot;id\&quot;:\&quot;AROA27VDEGQLGDB4JOSOI:1f708920-18a6-11ed-8dd4-f162dca8fc19\&quot;,\&quot;arn\&quot;:\&quot;arn:aws:sts::xxxxx:assumed-role/cross-acount-role/1f708920-18a6-11ed-8dd4-f162dca8fc19\&quot;},\&quot;action\&quot;:\&quot;ec2:CreateVpc\&quot;,\&quot;resource\&quot;:\&quot;arn:aws:ec2:us-east-2:xxxxx:vpc/*\&quot;,\&quot;conditions\&quot;:{\&quot;items\&quot;:[{\&quot;key\&quot;:\&quot;aws:Region\&quot;,\&quot;values\&quot;:{\&quot;items\&quot;:[{\&quot;value\&quot;:\&quot;us-east-2\&quot;}]}},{\&quot;key\&quot;:\&quot;aws:Service\&quot;,\&quot;values\&quot;:{\&quot;items\&quot;:[{\&quot;value\&quot;:\&quot;ec2\&quot;}]}},{\&quot;key\&quot;:\&quot;aws:Resource\&quot;,\&quot;values\&quot;:{\&quot;items\&quot;:[{\&quot;value\&quot;:\&quot;vpc/*\&quot;}]}},{\&quot;key\&quot;:\&quot;aws:Type\&quot;,\&quot;values\&quot;:{\&quot;items\&quot;:[{\&quot;value\&quot;:\&quot;vpc\&quot;}]}},{\&quot;key\&quot;:\&quot;aws:Account\&quot;,\&quot;values\&quot;:{\&quot;items\&quot;:[{\&quot;value\&quot;:\&quot;xxxxxx\&quot;}]}},{\&quot;key\&quot;:\&quot;ec2:VpcID\&quot;,\&quot;values\&quot;:{\&quot;items\&quot;:[{\&quot;value\&quot;:\&quot;*\&quot;}]}},{\&quot;key\&quot;:\&quot;aws:ARN\&quot;,\&quot;values\&quot;:{\&quot;items\&quot;:[{\&quot;value\&quot;:\&quot;arn:aws:ec2:us-east-2:xxxx:vpc/*\&quot;}]}}]}}}&quot;</span>
 <span class="p">}</span>
 </code></pre></div></p>
-<p>From the above response we can see that the cross-account role is missing the <code>ec2:CreateVpc</code> permission. The solution is to terminate the cluster in error and update <a href="getting_started/#step-1-connecting-your-aws-account">cross account role setup</a> with the missing permission(s) and then try to create a new cluster.</p>
+<p>From the above response we can see that the cross-account role is missing the <code>ec2:CreateVpc</code> permission. The solution is to terminate the cluster in error and update <a href="../getting_started/#step-1-connecting-your-aws-account">cross account role setup</a> with the missing permission(s) and then try to create a new cluster.</p>
 <h2 id="missing-permissions-error-during-cluster-creation">Missing permissions error during cluster creation<a class="headerlink" href="#missing-permissions-error-during-cluster-creation" title="Permanent link">#</a></h2>
 <p>If you encounter the following error right after creating your cluster, then the issue is with the instance profile permissions.  </p>
 <p align="center">
   <figure>
-    <a  href="../../../assets/images/setup_installation/managed/aws/troubleshooting-missing-permissions-error.png">
-      <img style="border: 1px solid #000;width:700px" src="../../../assets/images/setup_installation/managed/aws/troubleshooting-missing-permissions-error.png" alt="Missing permissions error during cluster creation">
-    </a>
+    <img style="border: 1px solid #000;width:700px" src="../../../assets/images/setup_installation/managed/aws/troubleshooting-missing-permissions-error.png" alt="Missing permissions error during cluster creation">
     <figcaption>Missing permissions error during cluster creation</figcaption>
   </figure>
 </p>
@@ -5214,7 +5242,7 @@
 <p>The <a href="cluster_creation/#step-5-select-the-instance-profile">instance profile that you have chosen during cluster creation</a> is actually missing the permissions stated in the error  on your <a href="cluster_creation/#step-2-setting-the-general-information">chosen S3 bucket</a>. Then in that case, update your instance profile accordingly and then click <em>Retry</em> to retry cluster creation operation. </p>
 </li>
 <li>
-<p>Your AWS organization is using <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html">SCPs policy</a> that disallow policy simulation. In that case, you could do a simple test to confirm the issue by using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html">the AWS PolicySim on AWS console</a>. If policy simulation is disallowed, you can configure managed.hopsworks.ai to skip the policy simulation step by removing the <code>iam:SimulatePrincipalPolicy</code> permission from <a href="getting_started/#step-1-connecting-your-aws-account">your cross account role</a>, by navitgating to the <a href="https://us-east-1.console.aws.amazon.com/iamv2/home#/roles">AWS Roles console</a>, search for your cross account role name and click on it, on the permissions tab click edit on hopsworks inline policy, choose JSON tab, remove <code>iam:SimulatePrincipalPolicy</code>, click <em>Review Policy</em>, and then click <em>Save Changes</em>, and finally navigate back to manged.hopsworks.ai and click <em>Retry</em> to retry the cluster creation.</p>
+<p>Your AWS organization is using <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html">SCPs policy</a> that disallow policy simulation. In that case, you could do a simple test to confirm the issue by using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_testing-policies.html">the AWS PolicySim on AWS console</a>. If policy simulation is disallowed, you can configure managed.hopsworks.ai to skip the policy simulation step by removing the <code>iam:SimulatePrincipalPolicy</code> permission from <a href="../getting_started/#step-1-connecting-your-aws-account">your cross account role</a>, by navigating to the <a href="https://us-east-1.console.aws.amazon.com/iamv2/home#/roles">AWS Roles console</a>, search for your cross account role name and click on it, on the permissions tab click edit on hopsworks inline policy, choose JSON tab, remove <code>iam:SimulatePrincipalPolicy</code>, click <em>Review Policy</em>, and then click <em>Save Changes</em>, and finally navigate back to managed.hopsworks.ai and click <em>Retry</em> to retry the cluster creation.</p>
 </li>
 </ul>
 
@@ -5305,6 +5333,15 @@
     
     <a href="https://www.linkedin.com/company/hopsworks/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://bit.ly/publichopsworks" target="_blank" rel="noopener" title="bit.ly" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
     </a>
   
 </div>
